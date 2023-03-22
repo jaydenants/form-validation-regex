@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        #title{
+            font-size:60px;
+
+        }
+        #f1{
+            background-color: lightgreen;
+            border-radius:15px;
+            margin-top:30px;
+            width:400px;
+            height:300px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        #f2{
+            background-color: lightgreen;
+            border-radius:15px;
+            margin-top:30px;
+            width:400px;
+            height:300px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        #f3{
+            background-color: lightgreen;
+            border-radius:15px;
+            margin-top:30px;
+            width:400px;
+            height:300px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Form Validation</h1>
+
+    <form id="fowm">
+        <fieldset id="f1">
+
+            <label for="llamo">Name</label>
+            <input id="llamo" type="text" placeholder="Name" pattern="^[A-Za-z\s]{3,20}$" required>
+            
+            <label for="emai">Email</label>
+            <input id="emai" type="email" placeholder="Email" required>
+
+            <label for="fon">Phone</label>
+            <input id="fon" type="text" placeholder="xxx-xxx-xxxx" pattern="^[0-9]{3}[-]?[0-9]{3}[-]?[0-9]{4}$" maxlength="12" required>
+
+        </fieldset>
+
+        <fieldset id="f2">
+
+            <label for="addy">Address</label>
+            <input id="addy" type="text" placeholder="Address" required>
+
+            <label for="zip">Zip</label>
+            <input id="zip" type="text" placeholder="Zip Code" pattern="^[0-9]{5}$" maxlength="5" required>
+
+            <label for="cont">Country</label>
+            <select id="cont" name="conts" required>
+                <option>Pick Country</option>
+                <option>U.S.A</option>
+                <option>Canada</option>
+                <option>Mexico</option>
+                <option>Dominican Republic</option>
+            </select>
+
+
+        </fieldset>
+
+        <fieldset id="f3">
+
+            <label for="car">Card</label>
+            <br>
+            <label for="car1">Visa</label>    
+            <input id="car1" class="car"type="radio" name="cars" placeholder="Visa">
+            <label for="car2">Mastercard</label>
+            <input id="car2" class="car" type="radio" name="cars" placeholder="Mastercard">
+            <label for="car3">Discover</label>
+            <input id="car3" class="car" type="radio" name="cars" placeholder="Discover">
+
+            <br>
+
+            <label for="carnum">Card Number</label>
+            <input id="carnum" type="text" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^[0-9]{4}[-]?[0-9]{4}[-]?[0-9]{4}[-]?[0-9]{4}$" maxlength="20" required>
+                <br>
+            <label for="ssc">Security Code</label>
+            <input id="ssc" type="text" placeholder="ccv number" pattern="^[0-9]{3}$" maxlength="3" required>
+
+        </fieldset>
+
+        <button id="butto">Submit</button>
+    </form>
+    
+</body>
+</html>
